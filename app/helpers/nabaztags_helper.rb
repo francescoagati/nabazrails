@@ -1,0 +1,2 @@
+module NabaztagsHelper
+end

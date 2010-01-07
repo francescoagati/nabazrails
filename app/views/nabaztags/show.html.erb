@@ -1,0 +1,38 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", nabaztags_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_nabaztag_path %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", nabaztag_path %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b><%= t("activerecord.attributes.nabaztag.name", :default => t("activerecord.labels.name", :default => "Name")) %>:</b>
+          <%= @nabaztag.name %>
+        </p>
+
+              <p>
+                <b><%= t("activerecord.attributes.nabaztag.description", :default => t("activerecord.labels.description", :default => "description")) %>:</b>
+                <%= @nabaztag.description %>
+              </p>
+
+
+        <p>
+          <b><%= t("activerecord.attributes.nabaztag.serial_number", :default => t("activerecord.labels.serial_number", :default => "Serial number")) %>:</b>
+          <%= @nabaztag.serial_number %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.nabaztag.token", :default => t("activerecord.labels.token", :default => "Token")) %>:</b>
+          <%= @nabaztag.token %>
+        </p>
+      <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_nabaztag_path(@nabaztag), :class => "button" %> 
+      <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", nabaztag_path(@nabaztag), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>       
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>
