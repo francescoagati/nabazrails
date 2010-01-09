@@ -5137,3 +5137,199 @@ ActionController::RoutingError (No route matches "/" with {:method=>:get}):
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing NabaztagsController#index (for 127.0.0.1 at 2010-01-08 10:16:04) [GET]
+  [4;36;1mNabaztag Load (0.9ms)[0m   [0;1mSELECT * FROM "nabaztags" [0m
+Rendering template within layouts/application
+Rendering nabaztags/index
+
+ActionView::TemplateError (wakeup_nabaztag_url failed to generate from {:controller=>"nabaztags", :action=>"wakeup"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["nabaztags", :id, "wakeup"] - are they all satisfied?) on line #5 of app/views/nabaztags/_sidebar.html.erb:
+2:   <h3>Simple Block</h3>
+3:   <div class="content">
+4:     
+5:     <%= link_to_remote "Sveglia", :url => wakeup_nabaztag_path()   %> | 
+6:     <%= link_to_remote "Dormi", :url => sleep_nabaztag_path()   %>  
+7:     
+8:     <% form_remote_tag :url => listen_nabaztag_path(), :update => "radio_status" do |f| %>
+
+    (eval):16:in `wakeup_nabaztag_path'
+    app/views/nabaztags/_sidebar.html.erb:5
+    app/views/nabaztags/index.html.erb:48
+    app/controllers/nabaztags_controller.rb:10:in `index'
+
+Rendered rescues/_trace (74.5ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 10:16:11) [GET]
+
+ActionController::RoutingError (No route matches "/nabaztag" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RadiosController#index (for 127.0.0.1 at 2010-01-08 10:16:15) [GET]
+  [4;35;1mRadio Load (11.6ms)[0m   [0mSELECT * FROM "radios" [0m
+Rendering template within layouts/application
+Rendering radios/index
+Rendered radios/_sidebar (16.6ms)
+Completed in 66ms (View: 50, DB: 12) | 200 OK [http://localhost/radios]
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-08 10:16:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mNabaztag Load (0.2ms)[0m   [0;1mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (90.8ms)
+Completed in 123ms (View: 113, DB: 0) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing NabaztagsController#index (for 127.0.0.1 at 2010-01-08 10:16:22) [GET]
+  [4;35;1mNabaztag Load (0.6ms)[0m   [0mSELECT * FROM "nabaztags" [0m
+Rendering template within layouts/application
+Rendering nabaztags/index
+
+ActionView::TemplateError (wakeup_nabaztag_url failed to generate from {:controller=>"nabaztags", :action=>"wakeup"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["nabaztags", :id, "wakeup"] - are they all satisfied?) on line #5 of app/views/nabaztags/_sidebar.html.erb:
+2:   <h3>Simple Block</h3>
+3:   <div class="content">
+4:     
+5:     <%= link_to_remote "Sveglia", :url => wakeup_nabaztag_path()   %> | 
+6:     <%= link_to_remote "Dormi", :url => sleep_nabaztag_path()   %>  
+7:     
+8:     <% form_remote_tag :url => listen_nabaztag_path(), :update => "radio_status" do |f| %>
+
+    (eval):16:in `wakeup_nabaztag_path'
+    app/views/nabaztags/_sidebar.html.erb:5
+    app/views/nabaztags/index.html.erb:48
+    app/controllers/nabaztags_controller.rb:10:in `index'
+
+Rendered rescues/_trace (61.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-08 10:16:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mNabaztag Load (0.4ms)[0m   [0;1mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (5.7ms)
+Completed in 29ms (View: 18, DB: 0) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-08 10:16:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNabaztag Load (0.7ms)[0m   [0mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (5.2ms)
+Completed in 31ms (View: 17, DB: 1) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-08 10:16:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mNabaztag Load (0.4ms)[0m   [0;1mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (5.8ms)
+Completed in 29ms (View: 18, DB: 0) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-08 10:16:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNabaztag Load (0.3ms)[0m   [0mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (7.5ms)
+Completed in 37ms (View: 25, DB: 0) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 10:17:08) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 11:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 12:48:32) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 14:13:04) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 15:27:58) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 16:30:07) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 17:39:43) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-09 03:53:14) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-09 03:53:23) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing NabaztagsController#show (for 127.0.0.1 at 2010-01-09 03:53:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mNabaztag Load (7.1ms)[0m   [0;1mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering nabaztags/show
+Rendered nabaztags/_sidebar (46.3ms)
+Completed in 690ms (View: 405, DB: 7) | 200 OK [http://localhost/nabaztags/1]
+
+
+Processing NabaztagsController#wakeup (for 127.0.0.1 at 2010-01-09 03:53:32) [POST]
+  Parameters: {"authenticity_token"=>"wjczr8g5HwAWrNnfNTme+MsRDbQx8vWCfaUSB5DyPsY=", "id"=>"1", "_"=>""}
+  [4;35;1mNabaztag Load (0.3ms)[0m   [0mSELECT * FROM "nabaztags" WHERE ("nabaztags"."id" = 1) [0m
+Completed in 644ms (View: 2, DB: 0) | 200 OK [http://localhost/nabaztags/1/wakeup]
