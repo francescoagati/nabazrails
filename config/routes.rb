@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :radios
-  map.resources :nabaztags, :member => [:sleep,:wakeup,:listen]
+  map.resources :nabaztags, :member => [:sleep,:wakeup,:listen] do |nabaz|
+      nabaz.resource :status
+  end
      
   # The priority is based upon order of creation: first created -> highest priority.
 

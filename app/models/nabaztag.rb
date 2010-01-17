@@ -3,6 +3,14 @@ require 'open-uri'
 
 class Nabaztag < ActiveRecord::Base
 
+  validates_presence_of :token,  :message => "can't be blank"
+  validates_uniqueness_of :token,  :message => "must be unique"
+
+  validates_presence_of :serial_number,  :message => "can't be blank"
+  validates_uniqueness_of :serial_number,  :message => "must be unique"
+
+
+
   def listen_radio(radio)
 
     url="http://api.nabaztag.com/vl/FR/api_stream.jsp?sn=#{serial_number}&token=#{token}&"

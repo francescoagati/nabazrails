@@ -1,25 +1,5 @@
-<div class="block">
-  <h3>Simple Block</h3>
-  <div class="content">
+<% if params[:id] %>    
+  <%= render_cell :status, :index, :id => 222, :pippa => 113 %>
+  <%= render_cell :radio, :index, :id => 222, :pippa => 113 %>
+<% end %>
     
-    <%= link_to_remote "Sveglia", :url => wakeup_nabaztag_path()   %> | 
-    <%= link_to_remote "Dormi", :url => sleep_nabaztag_path()   %>  
-    
-    <% form_remote_tag :url => listen_nabaztag_path(), :update => "radio_status" do |f| %>
-        <%= text_field_tag "radio",  "1" %>
-        <%= submit_tag "Ascolta radio" %>
-    <% end -%>
-    <div id="radio_status"></div>
-
-    
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-<div class="block">
-  <h3>Links</h3>
-  <ul class="navigation">
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-  </ul>
-</div>
