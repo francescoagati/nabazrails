@@ -1,0 +1,5 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Nabaztag" [shape=Mrecord, label="{Nabaztag|name :string\lserial_number :string\ltoken :string\lcreated_at :datetime\lupdated_at :datetime\ldescription :string\l}"]
+	"Radio" [shape=Mrecord, label="{Radio|name :string\lurl :string\lcreated_at :datetime\lupdated_at :datetime\ldescription :string\l}"]
+}

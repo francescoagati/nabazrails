@@ -1,0 +1,13 @@
+<div class="block">
+  <h3>Radio</h3>
+  <div class="content">    
+
+    <% form_remote_tag :url => listen_nabaztag_path(), :update => "radio_status" do |f| %>
+        <%=  select_tag 'radio', options_for_select(Radio.find(:all).map{ |u| [u.name, u.id] }) %>
+        <%= submit_tag "Listen" %>
+    <% end -%>
+    <div id="radio_status"></div>
+
+  </div>
+</div>
+

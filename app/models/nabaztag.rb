@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-
 class Nabaztag < ActiveRecord::Base
 
   validates_presence_of :token,  :message => "can't be blank"
